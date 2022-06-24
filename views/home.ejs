@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<%- include('./navbar')  %> 
+    
+
+<div class="container py-5">
+    <div class="row mt-5">
+        <div class=" offset-2 col-lg-8">
+            <h1 class="text-center">Google Scholar </h1>
+            <form action="/test" method="post">
+                <input type="text" name="url" class="form-control"  placeholder="paste link  here"/>
+                <!-- <button type="button" >Search</button> -->
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
