@@ -3,16 +3,49 @@
 <html>
 
     <head>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="../public/style.css">
+    <style>
+        .body{
+            background-color: gainsboro;
+        }
+        .bg{
+            background-color: aliceblue;
+            box-shadow: 2px 4px 5px;
+            padding: 5px;
+          
+        }
+        .bg:hover{
+            background-color: floralwhite;
+            color: rgb(182, 138, 223);
+        }
+        .main{
+            background-color: rgb(241, 229, 229);
+        }
+        .main:hover{
+            background-color: rgb(201, 159, 199);
+        }
+    </style>
     </head>
-    <body>
-    <div id="feed">
+    <body class="body">
+        <%- include('./navbar')  %> 
+<div id="feed">
     
     </div>
     
-        <script src="../src/app.js">
-            var d='good'
-            document.write(d)
-        </script>
+
+<div class="container main py-5 mt-5 ">
+    
+
+    <div class="row mt-5 gx-2">
+
+        <div class="col-lg-6  bg">
+            <h1>Journals Papers <span class="badge badge-secondary box-shadow ">journals </span></h1>
+        </div>
+        <div class="col-lg-5 ml-2 bg">
+            <h1>Conference Papers<span class="badge badge-secondary box-shadow">conferecne </span></h1>
+        </div>
+    </div>
+   </div>
+      
     </body>
     </html>

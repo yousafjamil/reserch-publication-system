@@ -5,24 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .body{
+            background-color: gainsboro;
+        }
+        .bg{
+            background-color: aliceblue;
+            box-shadow: 2px 4px 5px;
+            padding: 5px;
+          
+        }
+        .bg:hover{
+            background-color: floralwhite;
+            color: rgb(182, 138, 223);
+        }
+        .main{
+            background-color: rgb(241, 229, 229);
+        }
+        .main:hover{
+            background-color: rgb(201, 159, 199);
+        }
+    </style>
 </head>
-<body>
+<body class="body">
 <%- include('./navbar')  %> 
-    <h1  class="text-danger mt-5 text-center">  Publish papers</h1>
     <% if(message) {%>
-   <h4 class="text-info mt-5 text-center"> Total publish papers   <%= message.length %> </h4> 
-        <% } else {%>
-            <h1>No  counter</h1>
-            <% } %> 
-            <br/>
-    <% if(message) {%>
+        <div class="container main py-5 mt-5 ">
+            <h1 class=" mt-5 text-center bg"> Total  Papers   <%= message.Papers %> </h1>
+
+            <div class="row mt-5 gx-2">
         
- <p>
-    <%=message %> 
- </p>
+                <div class="col-lg-6  bg">
+                    <h1>Journals Papers    <span class="badge badge-secondary box-shadow "><%= message.Journals %> </span></h1>
+                </div>
+                <div class="col-lg-5 ml-2 bg">
+                    <h1>Conference Papers    <span class="badge badge-secondary box-shadow"><%= message.Conference %>  </span></h1>
+                </div>
+            </div>
+           </div>
 
         <% } else {%>
-            <h1>No  counter</h1>
+            <h1>No  Data</h1>
             <% } %> 
+            <br/>
+    
 </body>
 </html>
